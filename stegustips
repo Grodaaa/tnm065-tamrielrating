@@ -1,0 +1,17 @@
+Du har nu ett konto på ITN:s databasserver för studenter.
+Server: mysql.itn.liu.se
+Databas: krien026
+Användaren "krien026" utan lösenord får bara göra SELECT.
+Användaren "krien026_edit" med lösenord "GlamStoja" får göra SELECT, INSERT, UPDATE och DELETE.
+Användaren "krien026_admin" med lösenord "GramKoja" får göra allt: SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, ALTER samt även skapa nya användare med andra rättigheter på den databasen.
+
+Mer information finns på:
+http://www.itn.liu.se/~stegu/mysql/
+
+FYI, det jag konkret gjorde i SQL som administratör var detta:
+
+grant select on krien026.* to krien026@'%'
+grant select,insert,update,delete on krien026.* to krien026_edit@'%' identified by "GlamStoja"
+grant select,insert,update,delete,create,drop,alter on krien026.* to krien026_admin@'%' identified by "GramKoja" with grant option
+
+Databasen är tom just nu, men du får skapa tabeller fritt själv (med användaren krien026_admin).

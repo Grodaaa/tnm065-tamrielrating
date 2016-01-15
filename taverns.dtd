@@ -1,0 +1,15 @@
+<!ELEMENT taverns (name, location, picture, numTaverns, globalRating)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT location (#PCDATA)>
+	<!ELEMENT picture (#PCDATA)>
+	<!ELEMENT numTaverns (#PCDATA)>
+	<!ELEMENT globalRating (#PCDATA)>
+	
+<!ELEMENT ratings (name, description, foodRating, serviceRating, comfortRating, locationRating, totalRating)>
+	<!ELEMENT description (#PCDATA)>
+	<!ELEMENT foodRating (#PCDATA)>
+	<!ELEMENT serviceRating (#PCDATA)>
+	<!ELEMENT comfortRating (#PCDATA)>
+	<!ELEMENT locationRating (#PCDATA)>
+	<!ELEMENT totalRating (#PCDATA)>
+	
